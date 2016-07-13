@@ -2,6 +2,7 @@
     width: auto;
 }
 
+
 body {
     font-family:Helvetica, sans-serif;
     padding-top: 50px;
@@ -109,4 +110,41 @@ a, a:hover {
     #masthead h1 {
         font-size: 80px;
     }
+}
+
+.nav-item{
+    border: solid #12AB82 2px;
+    border-radius: 25px;
+}
+
+.nav-link:hover{
+    border: solid lightgrey 1px;
+    border-radius: 25px;
+    fill: red;
+    font-weight: bold;
+}
+
+#banner_logo{
+
+    width: 500px;
+    height: 250px;
+}
+
+.blog-box{
+    height: 370px;
+    border-radius: 6px;
+    opacity: 0.8;
+}
+.home-box{
+    height: 340px;
+    background-color: palegoldenrod;
+}
+.inner-blog-box{
+    padding: 15px;
+    border-radius: 6px;
+
+
+}
+.opreset{
+    opacity: 1.0;
 }

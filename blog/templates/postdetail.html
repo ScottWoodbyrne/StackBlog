@@ -1,9 +1,11 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+    <div class="col-md-12 blog-box">
+        <div class="inner-blog-box">
+        <div class="opreset">
         <div class="row">
-            <hr>
+
 
             <div class="col-md-2 col-sm-3 text-center">
                 <a class="story-img" href="#">
@@ -19,9 +21,9 @@
                         {% if post.image  %}
                             <img src="/media/{{ post.image }}">
                         {% endif %}
-                        <p>{{ post.content }}
-                        <p><button class="btn btn-default" onclick="location.href='/blog'">Back to Blog</button>
-                        <button class="btn btn-default" onclick="location.href='edit'">Edit</button>
+                        <p>{{ post.content | linebreaks }}</p>
+                        <p><button class="btn btn-default" onclick="location.href='{% url 'home'%}'">Back to Blog</button>
+                        <button class="btn btn-default" onclick="location.href='{% url 'edit_post' post.id%}'">Edit</button>
                         </p>
                         <p>
                             {% load disqus_tags %}
@@ -34,6 +36,9 @@
             </div>
 
         </div>
+    </div>
+        </div>
+    </div>
 
 {% endblock %}
 

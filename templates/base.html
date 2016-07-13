@@ -1,5 +1,5 @@
 {% load staticfiles %}
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Stack - Bootcamp Blog</title>
@@ -7,51 +7,47 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static "css/blog.css" %}">
 </head>
-<body>
+<body background="{% static "images/congruent_pentagon.png" %}">
 
 <div id="masthead">
     <div class="container">
-        <div class="row">
-            <h1>stack
-                <p id="logo" class="lead">The Trials of a Bootcamp Developer</p>
+        <div class="jumbotron">
+
+            <h1 >Stacked
+
+                <p  id="logo" class="lead">The Trials of a Bootcamp Developer</p>
             </h1>
+            <hr/>
 
+            <nav >
+                <ul class="nav nav-pills pull-right">
+                    <li class="nav-item">
+                      <a class="nav-link" href='{% url 'home'%}'>Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href='{% url 'top'%}'>Most Viewed</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href='{% url 'shortest'%}'>Shortest</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href='{% url 'new_post'%}'>New Post</a>
+                    </li>
 
-    <nav>
-        <ul class="nav nav-pills pull-right">
-            <li class="nav-item">
-              <a class="nav-link" href="/blog">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/blog/top">Most Viewed</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/blog/shortest">Shortest</a>
-            </li>
-          </ul>
-    </nav>
-
-
+                  </ul>
+            </nav>
         </div>
     </div>
 </div>
+
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
-            <div class="panel">
-                <div class="panel-body">
+
                     {% block content %}
                     {% endblock %}
-                </div>
-            </div>
-        </div>
     </div>
 </div>
-<footer>
-    <div class="container">
 
-    </div>
-</footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js">
 
 </script>
